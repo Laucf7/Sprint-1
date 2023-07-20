@@ -1,0 +1,241 @@
+*{ 
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+body {
+font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.padre{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.margen-interno{
+  padding: 0 50px;
+}
+
+  .header {
+    background: url(images/header.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 50px;
+
+  }
+    .menu {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+      .logo {
+        flex: 1 1 auto;
+      }
+      .minilogo {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        animation: izquierdaDer 1s ease-in;
+      }
+      .nav {
+        flex: 5 1 auto;
+        display: flex;
+      }
+        .nav a{
+          color: grey;
+          font-size: 11px;
+          text-transform: uppercase;
+          padding: 0 10px;
+          letter-spacing: 2px;
+        }
+        .nav a:hover{
+          color: darkslategray;
+        }
+
+      .social {
+        flex: 1 1 auto;
+        display: flex;
+      }
+        .social a{
+          font-size: 18px;
+          color:grey;
+          padding: 0 5px;
+
+        }
+        .social a:hover{
+          color: darkslategray;
+        }
+    
+    .texto-principal {
+      height: 200px;
+      text-align: center;
+    }
+      h1 {
+        font-size: 21px;
+        color: rgb(255, 153, 0);
+        font-weight: 900;
+        line-height: 15;
+        text-align: bottom;
+        height: 20px;
+        /*background: lightgrey;/*
+        /*background-size: 15px 50px;*/
+        /*opacity: 0.7;*/
+        display: inline-block;
+        animation: arriba 1s ease-in;
+      }
+
+  .section {
+  background: white;
+  display: flex;
+  margin-top: 8px;
+  }
+    .articulos {
+      background: rgb(184, 184, 184);
+      flex: 2 1 auto;
+      display: flex;
+      flex-flow: row wrap;
+    }
+      .article {
+        flex: 1 1 40%;
+        color: darkslategrey;
+        font-size: 13px;
+        letter-spacing: 1px;
+        margin: 10px 10px 0 0px;
+        flex: 1 1 45%;
+        background: rgb(237, 236, 236);
+      }
+      .article img{
+        width: 100%;
+      }
+      h3{
+        color: rgb(247, 207, 120);
+        font-size: 13px;
+        padding: 10px 0;
+        margin-top: -45px;
+        margin-left: 20px;
+      }
+      h2{
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 10px 0 0 5px;
+        color: white;
+        background: rgb(229, 115, 134);
+      }
+      p{
+        color: darkslategrey;
+      }
+    .aside {
+      background: rgb(184, 184, 184);
+      flex: 1 1 auto;
+      margin-left: 8px;
+    }
+      .publicidad {
+        background: rgb(237, 236, 236);
+      }
+    .pieart{
+      flex: 1 1 40%;
+      color: darkslategrey;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin: 10px 10px 0 0px;
+    }
+
+  .footer {
+    background: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+    .pie {
+      background: lightgray;
+      flex: 1 1 auto;
+      text-align: center;
+    } 
+    .pie a{
+      color: darkslategrey;
+      font-size: 11px;
+      text-transform: uppercase;
+      padding: 0 10px;
+      letter-spacing: 2px;
+    }
+
+@media all and (max-width: 935px){
+  .menu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+@media all and (max-width: 840px){ /*for tablet*/
+  .section {
+    flex-direction: column;
+  }
+  .articulos {
+    flex-direction: column;
+  }
+  .aside{
+    margin-left: 0px;
+   }
+  h1{
+    font-size: 15px;
+   }
+   
+}
+@media all and (max-width: 750px){
+   .off {
+    display: none;
+   }
+}
+
+
+@media all and (max-width: 480px){ /*for mobile*/
+ .menu {
+  flex-direction: column;
+ }
+ h1{
+  font-size: 10px;
+ }
+ .articulos {
+  flex-direction: column;
+  background: darkblue;
+ }
+ .pieart{
+  color:white;
+ }
+ .aside{
+  background: orange;
+  margin-left: 0px;
+ }
+}
+
+@keyframes arriba {
+
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes izquierdaDer {
+
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
